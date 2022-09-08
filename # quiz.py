@@ -1,34 +1,27 @@
-# lea un numero entero de 5 digitos y determinar si es capicua 
+# Quiz: DETERMINAR NUMERO ENTERO DE 5 DIGITOS Y DETERMINAR SI ES CAPICUA 
 
-print("------------------------------------")
-print("---NUMERO ENTERO Y DE CINCO DIGITOS ")
-print("------------------------------------")
+print("-------------------------------------")
+print("-------------------------------------")
+print("---------- numero_capicua------------")
+print("-------------------------------------")
+print("-------------------------------------")
 
-# input
+#input
+N = int(input("Por favor dígite un número de 5 dígitos: "))
 
-x = int(input("Digite el valor del numero: "))
+#proccesing 
 
-#   Processing 
+#<>10000
+if N >= 100000 or N <= 9999:
+    print("")
+    print("El numero digitado tiene cuatro digitos_digita otro que tenga 5")
 
-if 9999 < x < 100000:
-    msj = (" El numero digitado tiene cinco digitos")
 else:
-    msj = (" El numero digitado no tiene cinco digitos ")
-
-n1 = x / 10
-n2 = x / 1000
-n3 = x / 10000
-
-if (10 == 10000):
-    msj = (" El numero es capicuan ")
-
-if ( 100 == 1000):
-    msj = (" El numero es capicuan ")
-
-
-# output
-
-print("El numero es " + str(x) + msj )
+    N1 = int(str(N)[::-1])
+    if N1 == N:
+        print("el número",N," es un número capicúa")
+    else:
+        print("el número",N,"no es un número capicúa")
 
 
 
